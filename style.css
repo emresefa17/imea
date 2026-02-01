@@ -219,7 +219,8 @@ header.scrolled .logo {
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 1001;
+    z-index: 1002;
+    position: relative;
 }
 
 .mobile-menu-toggle span {
@@ -228,6 +229,10 @@ header.scrolled .logo {
     background: #ffffff;
     border-radius: 3px;
     transition: all 0.3s ease;
+}
+
+header.scrolled .mobile-menu-toggle span {
+    background: #000000;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
@@ -1413,24 +1418,38 @@ body:not(.loaded)::before {
         backdrop-filter: blur(10px);
         transform: none;
         transition: left 0.3s ease;
-        z-index: 1000;
+        z-index: 1001;
         padding-top: 80px;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     nav.active {
         left: 0;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .mobile-menu-toggle {
+        z-index: 1002;
     }
 
     .nav-links {
         flex-direction: column;
         gap: 0;
         padding: 20px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: flex !important;
     }
 
     .nav-links li {
         width: 100%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: list-item !important;
     }
 
     .nav-links a {
@@ -1438,10 +1457,17 @@ body:not(.loaded)::before {
         padding: 15px 0;
         font-size: 1.1rem;
         white-space: normal;
+        color: #ffffff !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-links a::after {
         display: none;
+    }
+
+    .nav-links a:hover {
+        color: var(--primary-red) !important;
     }
 
     .logo-img {
