@@ -328,7 +328,7 @@ nav {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('images/hero.jpg') center/cover no-repeat;
+    background: url('images/hero.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
 }
